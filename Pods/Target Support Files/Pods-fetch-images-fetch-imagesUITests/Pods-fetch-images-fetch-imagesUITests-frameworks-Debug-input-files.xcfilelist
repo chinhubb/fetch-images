@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-fetch-images-fetch-imagesUITests/Pods-fetch-images-fetch-imagesUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework
+${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework
