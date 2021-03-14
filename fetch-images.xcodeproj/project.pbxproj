@@ -18,6 +18,7 @@
 		E94529AF25FB78AA00BC68C9 /* fetch_imagesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94529AE25FB78AA00BC68C9 /* fetch_imagesTests.swift */; };
 		E94529BA25FB78AA00BC68C9 /* fetch_imagesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94529B925FB78AA00BC68C9 /* fetch_imagesUITests.swift */; };
 		E9452A0025FBBE1900BC68C9 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94529FF25FBBE1900BC68C9 /* ApiManager.swift */; };
+		E96DDF7C25FE75C500935D8A /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DDF7B25FE75C500935D8A /* ImageManager.swift */; };
 		E985B7A825FE180B00E9DFFE /* InternetUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985B7A725FE180B00E9DFFE /* InternetUtils.swift */; };
 		E985B7C525FE18C100E9DFFE /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985B7C425FE18C100E9DFFE /* ErrorMessage.swift */; };
 		E985B7E225FE194100E9DFFE /* ObjectMapperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985B7E125FE194100E9DFFE /* ObjectMapperModel.swift */; };
@@ -70,6 +71,7 @@
 		E94529B925FB78AA00BC68C9 /* fetch_imagesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fetch_imagesUITests.swift; sourceTree = "<group>"; };
 		E94529BB25FB78AA00BC68C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E94529FF25FBBE1900BC68C9 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		E96DDF7B25FE75C500935D8A /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		E985B7A725FE180B00E9DFFE /* InternetUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetUtils.swift; sourceTree = "<group>"; };
 		E985B7C425FE18C100E9DFFE /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		E985B7E125FE194100E9DFFE /* ObjectMapperModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapperModel.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				E985B7A725FE180B00E9DFFE /* InternetUtils.swift */,
 				E985B7C425FE18C100E9DFFE /* ErrorMessage.swift */,
 				E985B84525FE2AC200E9DFFE /* SkeletonLoad.swift */,
+				E96DDF7B25FE75C500935D8A /* ImageManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 				E985B83D25FE22CD00E9DFFE /* DetailPictureCollectionViewCell.swift in Sources */,
 				E985B8BC25FE5FF600E9DFFE /* PhotoRepository.swift in Sources */,
 				E985B7A825FE180B00E9DFFE /* InternetUtils.swift in Sources */,
+				E96DDF7C25FE75C500935D8A /* ImageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

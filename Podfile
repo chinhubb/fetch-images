@@ -13,6 +13,8 @@ target 'fetch-images' do
    pod 'RxSwift'
    pod 'RxCocoa'
    pod 'ReachabilitySwift'
+   pod 'Kingfisher'
+
    
 
   target 'fetch-imagesTests' do

@@ -3,6 +3,7 @@ PODS:
   - AlamofireObjectMapper (5.2.1):
     - Alamofire (~> 4.7)
     - ObjectMapper (~> 3.4)
+  - Kingfisher (6.1.1)
   - ObjectMapper (3.5.3)
   - ReachabilitySwift (5.0.0)
   - RxCocoa (6.1.0):
@@ -15,6 +16,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - AlamofireObjectMapper (~> 5.0)
+  - Kingfisher
   - ObjectMapper
   - ReachabilitySwift
   - RxCocoa
@@ -24,6 +26,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireObjectMapper
+    - Kingfisher
     - ObjectMapper
     - ReachabilitySwift
     - RxCocoa
@@ -33,12 +36,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
+  Kingfisher: 676d63307fbef6ed5d5ed400bff36983480d7500
   ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
   RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
   RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
 
-PODFILE CHECKSUM: 6a112530ec8c8d35041c5a35096bedccdd870bb3
+PODFILE CHECKSUM: c700f2efef85518075f6a3293a3a53b448d874a4
 
 COCOAPODS: 1.9.0

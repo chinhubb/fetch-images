@@ -14,7 +14,8 @@ class DetailPictureCollectionViewCell: UICollectionViewCell, SkeletonDisplayable
     @IBOutlet var containerView: UIView!
     @IBOutlet var cardView: UIView!
     @IBOutlet var nameLabel: UILabel!
-
+    @IBOutlet weak var imageView: UIImageView!
+    
     @IBOutlet var cardTop: NSLayoutConstraint!
     @IBOutlet var cardBottom: NSLayoutConstraint!
     @IBOutlet var cardLeading: NSLayoutConstraint!
@@ -28,6 +29,6 @@ class DetailPictureCollectionViewCell: UICollectionViewCell, SkeletonDisplayable
     func setCell(_ data: PhotoModel?) {
         guard let list = data else { return }
         nameLabel.text = list.name ?? ""
-        
+        ImageManager.loadImage(imageView, list.imageURL?[0])
     }
 }

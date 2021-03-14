@@ -85,6 +85,7 @@
                 <outlet property="cardTrailling" destination="BA6-r7-ZMl" id="NIU-On-WHe"/>
                 <outlet property="cardView" destination="BZh-Sn-22u" id="kxU-vq-90f"/>
                 <outlet property="containerView" destination="0Y8-Hh-ZYr" id="7gH-Rp-KOJ"/>
+                <outlet property="imageView" destination="VTe-98-MWe" id="VFb-5G-mPs"/>
                 <outlet property="nameLabel" destination="5MD-KG-NZt" id="xIj-do-kzS"/>
             </connections>
             <point key="canvasLocation" x="67.391304347826093" y="52.232142857142854"/>
