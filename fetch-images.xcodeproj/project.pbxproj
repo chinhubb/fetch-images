@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,8 +19,9 @@
 		E94529AF25FB78AA00BC68C9 /* fetch_imagesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94529AE25FB78AA00BC68C9 /* fetch_imagesTests.swift */; };
 		E94529BA25FB78AA00BC68C9 /* fetch_imagesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94529B925FB78AA00BC68C9 /* fetch_imagesUITests.swift */; };
 		E9452A0025FBBE1900BC68C9 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94529FF25FBBE1900BC68C9 /* ApiManager.swift */; };
-		E9452A0625FBBE9200BC68C9 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = E9452A0525FBBE9200BC68C9 /* SwiftPackageProductDependency */; };
-		E9452A1225FBBEEE00BC68C9 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = E9452A1125FBBEEE00BC68C9 /* SwiftPackageProductDependency */; };
+		E985B7A825FE180B00E9DFFE /* InternetUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985B7A725FE180B00E9DFFE /* InternetUtils.swift */; };
+		E985B7C525FE18C100E9DFFE /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985B7C425FE18C100E9DFFE /* ErrorMessage.swift */; };
+		E985B7E225FE194100E9DFFE /* ObjectMapperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985B7E125FE194100E9DFFE /* ObjectMapperModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,9 @@
 		E94529B925FB78AA00BC68C9 /* fetch_imagesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fetch_imagesUITests.swift; sourceTree = "<group>"; };
 		E94529BB25FB78AA00BC68C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E94529FF25FBBE1900BC68C9 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		E985B7A725FE180B00E9DFFE /* InternetUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetUtils.swift; sourceTree = "<group>"; };
+		E985B7C425FE18C100E9DFFE /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		E985B7E125FE194100E9DFFE /* ObjectMapperModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapperModel.swift; sourceTree = "<group>"; };
 		FD42B3B30D02D4AEFF167E7E /* Pods-fetch-images-fetch-imagesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fetch-images-fetch-imagesUITests.release.xcconfig"; path = "Target Support Files/Pods-fetch-images-fetch-imagesUITests/Pods-fetch-images-fetch-imagesUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,8 +76,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9452A1225FBBEEE00BC68C9 /* BuildFile in Frameworks */,
-				E9452A0625FBBE9200BC68C9 /* BuildFile in Frameworks */,
 				890025C91E612A570CADB800 /* Pods_fetch_images.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,7 +109,6 @@
 				6742E9BC831E7FF49041D145 /* Pods-fetch-imagesTests.debug.xcconfig */,
 				6A663C0AFEFE4417FD348B6B /* Pods-fetch-imagesTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -146,7 +147,7 @@
 		E945299625FB78A800BC68C9 /* fetch-images */ = {
 			isa = PBXGroup;
 			children = (
-				E94529FD25FBBD9500BC68C9 /* Api */,
+				E94529FD25FBBD9500BC68C9 /* Manager */,
 				E94529FA25FBBD3E00BC68C9 /* CollectionViewCell */,
 				E94529F925FBBD0600BC68C9 /* ViewController */,
 				E94529F825FBBCF100BC68C9 /* Navigator */,
@@ -183,7 +184,7 @@
 		E94529F725FBBCE200BC68C9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E94529FE25FBBDA200BC68C9 /* Response */,
+				E985B7E125FE194100E9DFFE /* ObjectMapperModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,19 +218,14 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		E94529FD25FBBD9500BC68C9 /* Api */ = {
+		E94529FD25FBBD9500BC68C9 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
 				E94529FF25FBBE1900BC68C9 /* ApiManager.swift */,
+				E985B7A725FE180B00E9DFFE /* InternetUtils.swift */,
+				E985B7C425FE18C100E9DFFE /* ErrorMessage.swift */,
 			);
-			path = Api;
-			sourceTree = "<group>";
-		};
-		E94529FE25FBBDA200BC68C9 /* Response */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Response;
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,8 +247,6 @@
 			);
 			name = "fetch-images";
 			packageProductDependencies = (
-				E9452A0525FBBE9200BC68C9 /* SwiftPackageProductDependency */,
-				E9452A1125FBBEEE00BC68C9 /* SwiftPackageProductDependency */,
 			);
 			productName = "fetch-images";
 			productReference = E945299425FB78A800BC68C9 /* fetch-images.app */;
@@ -329,8 +323,6 @@
 			);
 			mainGroup = E945298B25FB78A700BC68C9;
 			packageReferences = (
-				E9452A0425FBBE9200BC68C9 /* RemoteSwiftPackageReference */,
-				E9452A1025FBBEEE00BC68C9 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = E945299525FB78A800BC68C9 /* Products */;
 			projectDirPath = "";
@@ -479,9 +471,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9452A0025FBBE1900BC68C9 /* ApiManager.swift in Sources */,
+				E985B7E225FE194100E9DFFE /* ObjectMapperModel.swift in Sources */,
 				E945299C25FB78A800BC68C9 /* ViewController.swift in Sources */,
 				E945299825FB78A800BC68C9 /* AppDelegate.swift in Sources */,
 				E945299A25FB78A800BC68C9 /* SceneDelegate.swift in Sources */,
+				E985B7C525FE18C100E9DFFE /* ErrorMessage.swift in Sources */,
+				E985B7A825FE180B00E9DFFE /* InternetUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -820,38 +815,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		E9452A0425FBBE9200BC68C9 /* RemoteSwiftPackageReference */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.4.1;
-			};
-		};
-		E9452A1025FBBEEE00BC68C9 /* RemoteSwiftPackageReference */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.1.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		E9452A0525FBBE9200BC68C9 /* SwiftPackageProductDependency */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E9452A0425FBBE9200BC68C9 /* RemoteSwiftPackageReference */;
-			productName = Alamofire;
-		};
-		E9452A1125FBBEEE00BC68C9 /* SwiftPackageProductDependency */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E9452A1025FBBEEE00BC68C9 /* RemoteSwiftPackageReference */;
-			productName = RxSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E945298C25FB78A800BC68C9 /* Project object */;
 }

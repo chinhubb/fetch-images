@@ -8,6 +8,12 @@ target 'fetch-images' do
   # Pods for fetch-images
 
    pod 'AlamofireObjectMapper', '~> 5.0'
+   pod 'Alamofire'
+   pod 'ObjectMapper'
+   pod 'RxSwift'
+   pod 'RxCocoa'
+   pod 'ReachabilitySwift'
+   
 
   target 'fetch-imagesTests' do
     inherit! :search_paths
