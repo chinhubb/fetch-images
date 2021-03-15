@@ -23,32 +23,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2bd-P4-OGB">
-                                <rect key="frame" x="0.0" y="119" width="414" height="777"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oRi-n5-wSK">
+                                <rect key="frame" x="16" y="119" width="382" height="727"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Byw-N3-6bs">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2bd-P4-OGB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DAV-23-fGy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oRi-n5-wSK" secondAttribute="trailing" constant="16" id="2MU-Q7-Xj8"/>
+                            <constraint firstItem="oRi-n5-wSK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4ct-Oe-8i3"/>
+                            <constraint firstItem="oRi-n5-wSK" firstAttribute="top" secondItem="Z5a-rx-RAK" secondAttribute="bottom" constant="16" id="5QH-ms-I3e"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z5a-rx-RAK" secondAttribute="trailing" constant="16" id="I47-Di-h5U"/>
-                            <constraint firstItem="2bd-P4-OGB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="K6i-Y6-cQJ"/>
-                            <constraint firstItem="Z5a-rx-RAK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="LWZ-DG-6nT"/>
-                            <constraint firstAttribute="bottom" secondItem="2bd-P4-OGB" secondAttribute="bottom" id="RPf-Gl-d8S"/>
                             <constraint firstItem="Z5a-rx-RAK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="V7f-f4-TAA"/>
-                            <constraint firstItem="2bd-P4-OGB" firstAttribute="top" secondItem="Z5a-rx-RAK" secondAttribute="bottom" constant="16" id="aAc-Yp-Oi7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oRi-n5-wSK" secondAttribute="bottom" constant="16" id="nA3-NM-ult"/>
+                            <constraint firstItem="Z5a-rx-RAK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="uzG-O8-pfr"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="collectionview" destination="2bd-P4-OGB" id="yd2-WA-Rfs"/>
+                        <outlet property="tableView" destination="oRi-n5-wSK" id="7ZG-lW-6kc"/>
                         <outlet property="titleLabel" destination="Z5a-rx-RAK" id="5lo-OH-iaV"/>
                     </connections>
                 </viewController>

@@ -18,7 +18,11 @@
 		E94529AF25FB78AA00BC68C9 /* fetch_imagesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94529AE25FB78AA00BC68C9 /* fetch_imagesTests.swift */; };
 		E94529BA25FB78AA00BC68C9 /* fetch_imagesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94529B925FB78AA00BC68C9 /* fetch_imagesUITests.swift */; };
 		E9452A0025FBBE1900BC68C9 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94529FF25FBBE1900BC68C9 /* ApiManager.swift */; };
+		E94C826225FFC20700419D48 /* ListImagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94C826025FFC20700419D48 /* ListImagesTableViewCell.swift */; };
+		E94C826325FFC20700419D48 /* ListImagesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E94C826125FFC20700419D48 /* ListImagesTableViewCell.xib */; };
 		E96DDF7C25FE75C500935D8A /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DDF7B25FE75C500935D8A /* ImageManager.swift */; };
+		E96DDF9025FE7B2500935D8A /* InsertImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DDF8E25FE7B2500935D8A /* InsertImageCollectionViewCell.swift */; };
+		E96DDF9125FE7B2500935D8A /* InsertImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E96DDF8F25FE7B2500935D8A /* InsertImageCollectionViewCell.xib */; };
 		E985B7A825FE180B00E9DFFE /* InternetUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985B7A725FE180B00E9DFFE /* InternetUtils.swift */; };
 		E985B7C525FE18C100E9DFFE /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985B7C425FE18C100E9DFFE /* ErrorMessage.swift */; };
 		E985B7E225FE194100E9DFFE /* ObjectMapperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985B7E125FE194100E9DFFE /* ObjectMapperModel.swift */; };
@@ -71,7 +75,11 @@
 		E94529B925FB78AA00BC68C9 /* fetch_imagesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fetch_imagesUITests.swift; sourceTree = "<group>"; };
 		E94529BB25FB78AA00BC68C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E94529FF25FBBE1900BC68C9 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		E94C826025FFC20700419D48 /* ListImagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListImagesTableViewCell.swift; sourceTree = "<group>"; };
+		E94C826125FFC20700419D48 /* ListImagesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListImagesTableViewCell.xib; sourceTree = "<group>"; };
 		E96DDF7B25FE75C500935D8A /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		E96DDF8E25FE7B2500935D8A /* InsertImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		E96DDF8F25FE7B2500935D8A /* InsertImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InsertImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		E985B7A725FE180B00E9DFFE /* InternetUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetUtils.swift; sourceTree = "<group>"; };
 		E985B7C425FE18C100E9DFFE /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		E985B7E125FE194100E9DFFE /* ObjectMapperModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapperModel.swift; sourceTree = "<group>"; };
@@ -161,6 +169,7 @@
 		E945299625FB78A800BC68C9 /* fetch-images */ = {
 			isa = PBXGroup;
 			children = (
+				E94C825F25FFC1D600419D48 /* TableViewCell */,
 				E985B8BA25FE5FE000E9DFFE /* Repository */,
 				E94529FD25FBBD9500BC68C9 /* Manager */,
 				E94529FA25FBBD3E00BC68C9 /* CollectionViewCell */,
@@ -225,6 +234,7 @@
 			children = (
 				E94529FB25FBBD4C00BC68C9 /* UI */,
 				E985B83B25FE22CD00E9DFFE /* DetailPictureCollectionViewCell.swift */,
+				E96DDF8E25FE7B2500935D8A /* InsertImageCollectionViewCell.swift */,
 			);
 			path = CollectionViewCell;
 			sourceTree = "<group>";
@@ -233,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				E985B83C25FE22CD00E9DFFE /* DetailPictureCollectionViewCell.xib */,
+				E96DDF8F25FE7B2500935D8A /* InsertImageCollectionViewCell.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -247,6 +258,15 @@
 				E96DDF7B25FE75C500935D8A /* ImageManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		E94C825F25FFC1D600419D48 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E94C826025FFC20700419D48 /* ListImagesTableViewCell.swift */,
+				E94C826125FFC20700419D48 /* ListImagesTableViewCell.xib */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		E985B8BA25FE5FE000E9DFFE /* Repository */ = {
@@ -373,6 +393,8 @@
 				E94529A125FB78A900BC68C9 /* Assets.xcassets in Resources */,
 				E985B83E25FE22CD00E9DFFE /* DetailPictureCollectionViewCell.xib in Resources */,
 				E945299F25FB78A800BC68C9 /* Main.storyboard in Resources */,
+				E96DDF9125FE7B2500935D8A /* InsertImageCollectionViewCell.xib in Resources */,
+				E94C826325FFC20700419D48 /* ListImagesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +531,8 @@
 				E985B89C25FE5CBF00E9DFFE /* PageModel.swift in Sources */,
 				E985B83725FE217700E9DFFE /* ImagesFeedViewController.swift in Sources */,
 				E985B8A125FE5D5A00E9DFFE /* PhotoModel.swift in Sources */,
+				E96DDF9025FE7B2500935D8A /* InsertImageCollectionViewCell.swift in Sources */,
+				E94C826225FFC20700419D48 /* ListImagesTableViewCell.swift in Sources */,
 				E985B83D25FE22CD00E9DFFE /* DetailPictureCollectionViewCell.swift in Sources */,
 				E985B8BC25FE5FF600E9DFFE /* PhotoRepository.swift in Sources */,
 				E985B7A825FE180B00E9DFFE /* InternetUtils.swift in Sources */,

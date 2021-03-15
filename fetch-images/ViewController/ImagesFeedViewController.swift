@@ -11,26 +11,40 @@ import UIKit
 class ImagesFeedViewController: UIViewController {
     static let identifier = "ImagesFeedViewController"
     @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var collectionview: UICollectionView!
 
+    @IBOutlet var tableView: UITableView!
     private let refreshControl = UIRefreshControl()
 
     var listPhoto: [PhotoModel]? = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        initCollectionView()
+        initTableView()
         getImages()
     }
 
-    func initCollectionView() {
-        collectionview.register(DetailPictureCollectionViewCell.nib, forCellWithReuseIdentifier: DetailPictureCollectionViewCell.identifier)
-        collectionview.delegate = self
-        collectionview.dataSource = self
+    func initTableView() {
+        tableView.register(ListImagesTableViewCell.nib, forCellReuseIdentifier: ListImagesTableViewCell.identifier)
+
+        tableView.delegate = self
+        tableView.dataSource = self
 
         refreshControl.addTarget(self, action: #selector(pullRefresh(sender:)), for: .valueChanged)
-        collectionview.alwaysBounceVertical = true
-        collectionview.refreshControl = refreshControl
+        tableView.alwaysBounceVertical = true
+        tableView.refreshControl = refreshControl
+    }
+
+    func startRefresh() {
+        if tableView.contentOffset.y == 0 {
+            tableView.setContentOffset(CGPoint(x: 0, y: tableView.contentOffset.y - refreshControl.frame.size.height), animated: true)
+        }
+
+        refreshControl.beginRefreshing()
+    }
+
+    func endRefresh() {
+        tableView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+        refreshControl.endRefreshing()
     }
 
     @objc func pullRefresh(sender: Any) {
@@ -79,7 +93,7 @@ class ImagesFeedViewController: UIViewController {
             case let .next(data):
                 let list = data.photos
                 self.listPhoto = list
-                self.collectionview.reloadData()
+                self.tableView.reloadData()
             case let .error(error):
                 print(error)
             case .completed:
@@ -89,24 +103,32 @@ class ImagesFeedViewController: UIViewController {
     }
 }
 
-extension ImagesFeedViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+// extension ImagesFeedViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return listPhoto?.count ?? 0
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DetailPictureCollectionViewCell.identifier, for: indexPath) as? DetailPictureCollectionViewCell else { return UICollectionViewCell() }
+//        cell.setCell(listPhoto?[indexPath.row])
+//
+//
+//        return cell
+//    }
+// }
+
+extension ImagesFeedViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listPhoto?.count ?? 0
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DetailPictureCollectionViewCell.identifier, for: indexPath) as? DetailPictureCollectionViewCell else { return UICollectionViewCell() }
-        
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ListImagesTableViewCell", for: indexPath) as? ListImagesTableViewCell else { return UITableViewCell() }
         cell.setCell(listPhoto?[indexPath.row])
-
         return cell
     }
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
     }
 }
