@@ -14,7 +14,8 @@ import RxSwift
 class APImanager {
     static let DOMAIN = "https://api.500px.com/v1/"
 
-    static let FETCH_PHOTO = "photos?feature=popular&page=1"
+//    static let FETCH_PHOTO = "photos?feature=popular&page=1"
+      static let FETCH_PHOTO = "photos?feature=popular&"
 
     func printRequest(_ domain: String, _ apiname: String, _ parameter: [String: Any]?) {
         print("URL : \(domain)\(apiname) \nRequest : \(parameter ?? [:]) ")

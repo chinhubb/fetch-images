@@ -13,4 +13,8 @@ class PhotoRepository {
     func getPhotoPopular() -> Observable<PageModel> {
         return APImanager().getData(APImanager.FETCH_PHOTO, .get, nil)
     }
+    
+    func getPhotoPopularByPage(_ page : String) -> Observable<PageModel> {
+        return APImanager().getData(APImanager.FETCH_PHOTO + "page=\(page)" , .get, nil)
+    }
 }

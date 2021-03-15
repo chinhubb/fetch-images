@@ -14,7 +14,8 @@ class ListImagesTableViewCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var pic: UIImageView!
     @IBOutlet var descriptionLabel: UILabel!
-
+    @IBOutlet weak var voteCountLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -31,5 +32,6 @@ class ListImagesTableViewCell: UITableViewCell {
         title.text = list.name ?? ""
         ImageManager.loadImage(pic, list.imageURL?[0])
         descriptionLabel.text = list.description ?? ""
+        voteCountLabel.text = "\(list.voteCount ?? 0 )"
     }
 }
