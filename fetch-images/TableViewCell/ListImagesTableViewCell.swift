@@ -11,11 +11,12 @@ class ListImagesTableViewCell: UITableViewCell {
     static let identifier = "ListImagesTableViewCell"
     static let nib = UINib(nibName: ListImagesTableViewCell.identifier, bundle: nil)
 
-    @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var pic: UIImageView!
+    @IBOutlet var view: UIView!
+    @IBOutlet var title: UILabel!
+    @IBOutlet var pic: UIImageView!
     @IBOutlet var descriptionLabel: UILabel!
-    @IBOutlet weak var voteCountLabel: UILabel!
-    
+    @IBOutlet var voteCountLabel: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,6 +26,9 @@ class ListImagesTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+
+//        pic.clipsToBounds = false
+//        view.clipsToBounds = true
     }
 
     func setCell(_ data: PhotoModel?) {
@@ -32,6 +36,8 @@ class ListImagesTableViewCell: UITableViewCell {
         title.text = list.name ?? ""
         ImageManager.loadImage(pic, list.imageURL?[0])
         descriptionLabel.text = list.description ?? ""
-        voteCountLabel.text = "\(list.voteCount ?? 0 )"
+        voteCountLabel.text = "\(list.voteCount ?? 0)"
+        
+        
     }
 }
