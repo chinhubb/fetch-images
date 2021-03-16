@@ -59,7 +59,8 @@ class ImagesFeedViewController: UIViewController {
     }
 
     @objc func pullRefresh(sender: Any) {
-        getImages("\(pageInt)")
+//        getImages("\(pageInt)")
+        getImages("1")
     }
 
     func preloading() {
@@ -89,6 +90,7 @@ class ImagesFeedViewController: UIViewController {
                     self.listPhoto = self.listPhoto! + list
                     let indexPaths = Array(last ... (last + list.count - 1)).map { IndexPath(item: $0, section: 0) }
                     self.tableView.insertRows(at: indexPaths, with: .left)
+                    self.endRefresh()
 //                            self.tableView.reloadData()
                 }
             case let .error(err):
@@ -125,6 +127,7 @@ extension ImagesFeedViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
 }
 
 extension ImagesFeedViewController {
