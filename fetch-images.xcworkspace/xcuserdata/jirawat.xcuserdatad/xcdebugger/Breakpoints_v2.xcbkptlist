@@ -3,4 +3,150 @@
    uuid = "2755B63E-C336-4F66-A4AA-B1BB2A49D064"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FB048848-449D-4F44-9C1D-052E472EFB15"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "fetch-images/ViewController/ImagesFeedViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "pullRefresh(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8D649F62-50D4-44E4-9263-D46733BBDA38"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "fetch-images/ViewController/ImagesFeedViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "getImages(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "31BFB435-B8AC-499C-B8E6-E78E3A2861C2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "fetch-images/ViewController/ImagesFeedViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "getImages(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "31BFB435-B8AC-499C-B8E6-E78E3A2861C2 - 81c428df3d3f90e6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "fetch_images.ImagesFeedViewController.getImages(Swift.String) -&gt; ()"
+                  moduleName = "fetch-images"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jirawat/Desktop/test_Demo_exe/fetch-images/ViewController/ImagesFeedViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "220">
+               </Location>
+               <Location
+                  uuid = "31BFB435-B8AC-499C-B8E6-E78E3A2861C2 - 52787b5ddc77b61b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RxSwift.Event&lt;fetch_images.PageModel&gt;) -&gt; () in fetch_images.ImagesFeedViewController.getImages(Swift.String) -&gt; ()"
+                  moduleName = "fetch-images"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jirawat/Desktop/test_Demo_exe/fetch-images/ViewController/ImagesFeedViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "95">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DAD6AF34-225A-4E74-AEEA-AD79C34AD2A8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "fetch-images/ViewController/ImagesFeedViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "getImages(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7F9EF5C4-AF45-4A7A-810E-5A95EF532B76"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "fetch-images/ViewController/ImagesFeedViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "getImages(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7F9EF5C4-AF45-4A7A-810E-5A95EF532B76 - 52787b5ddc77b58f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RxSwift.Event&lt;fetch_images.PageModel&gt;) -&gt; () in fetch_images.ImagesFeedViewController.getImages(Swift.String) -&gt; ()"
+                  moduleName = "fetch-images"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jirawat/Desktop/test_Demo_exe/fetch-images/ViewController/ImagesFeedViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "1425">
+               </Location>
+               <Location
+                  uuid = "7F9EF5C4-AF45-4A7A-810E-5A95EF532B76 - 65830aece1d96ce3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int) -&gt; Foundation.IndexPath in closure #1 (RxSwift.Event&lt;fetch_images.PageModel&gt;) -&gt; () in fetch_images.ImagesFeedViewController.getImages(Swift.String) -&gt; ()"
+                  moduleName = "fetch-images"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jirawat/Desktop/test_Demo_exe/fetch-images/ViewController/ImagesFeedViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

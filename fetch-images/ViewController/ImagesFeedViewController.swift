@@ -30,7 +30,7 @@ class ImagesFeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initTableView()
-        getImages("1")
+        getImages("\(pageInt)")
     }
 
     func initTableView() {
@@ -59,7 +59,7 @@ class ImagesFeedViewController: UIViewController {
 
     @objc func pullRefresh(sender: Any) {
 //        getImages(selectCatagory, selectType, "0")
-        getImages("1")
+        getImages("\(pageInt)")
     }
 
     func preloading() {
@@ -68,7 +68,7 @@ class ImagesFeedViewController: UIViewController {
         tableView.reloadData()
     }
 
-    func getImages(_ page:String) {
+    func getImages(_ page: String) {
         if pageInt == 1 {
             preloading()
         }
@@ -132,5 +132,20 @@ extension ImagesFeedViewController: UITableViewDelegate, UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
+    }
+}
+
+extension ImagesFeedViewController {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let scrollOffset = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+
+        if scrollOffset > contentHeight - scrollView.frame.size.height &&
+            listPhoto?.count != 0 && !isLoading {
+            guard pageInt < max else { return }
+            pageInt += 1
+            isLoading = true
+            getImages("\(pageInt)")
+        }
     }
 }
