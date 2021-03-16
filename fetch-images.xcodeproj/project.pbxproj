@@ -20,6 +20,8 @@
 		E9452A0025FBBE1900BC68C9 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94529FF25FBBE1900BC68C9 /* ApiManager.swift */; };
 		E94C826225FFC20700419D48 /* ListImagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94C826025FFC20700419D48 /* ListImagesTableViewCell.swift */; };
 		E94C826325FFC20700419D48 /* ListImagesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E94C826125FFC20700419D48 /* ListImagesTableViewCell.xib */; };
+		E95A9920260104AB00C06E3A /* ImageInsertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A991E260104AB00C06E3A /* ImageInsertTableViewCell.swift */; };
+		E95A9921260104AB00C06E3A /* ImageInsertTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E95A991F260104AB00C06E3A /* ImageInsertTableViewCell.xib */; };
 		E96DDF7C25FE75C500935D8A /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DDF7B25FE75C500935D8A /* ImageManager.swift */; };
 		E96DDF9025FE7B2500935D8A /* InsertImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DDF8E25FE7B2500935D8A /* InsertImageCollectionViewCell.swift */; };
 		E96DDF9125FE7B2500935D8A /* InsertImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E96DDF8F25FE7B2500935D8A /* InsertImageCollectionViewCell.xib */; };
@@ -77,6 +79,8 @@
 		E94529FF25FBBE1900BC68C9 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		E94C826025FFC20700419D48 /* ListImagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListImagesTableViewCell.swift; sourceTree = "<group>"; };
 		E94C826125FFC20700419D48 /* ListImagesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListImagesTableViewCell.xib; sourceTree = "<group>"; };
+		E95A991E260104AB00C06E3A /* ImageInsertTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInsertTableViewCell.swift; sourceTree = "<group>"; };
+		E95A991F260104AB00C06E3A /* ImageInsertTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageInsertTableViewCell.xib; sourceTree = "<group>"; };
 		E96DDF7B25FE75C500935D8A /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		E96DDF8E25FE7B2500935D8A /* InsertImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		E96DDF8F25FE7B2500935D8A /* InsertImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InsertImageCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -263,10 +267,20 @@
 		E94C825F25FFC1D600419D48 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				E95A9925260104B700C06E3A /* UI */,
 				E94C826025FFC20700419D48 /* ListImagesTableViewCell.swift */,
-				E94C826125FFC20700419D48 /* ListImagesTableViewCell.xib */,
+				E95A991E260104AB00C06E3A /* ImageInsertTableViewCell.swift */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		E95A9925260104B700C06E3A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E94C826125FFC20700419D48 /* ListImagesTableViewCell.xib */,
+				E95A991F260104AB00C06E3A /* ImageInsertTableViewCell.xib */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		E985B8BA25FE5FE000E9DFFE /* Repository */ = {
@@ -394,6 +408,7 @@
 				E985B83E25FE22CD00E9DFFE /* DetailPictureCollectionViewCell.xib in Resources */,
 				E945299F25FB78A800BC68C9 /* Main.storyboard in Resources */,
 				E96DDF9125FE7B2500935D8A /* InsertImageCollectionViewCell.xib in Resources */,
+				E95A9921260104AB00C06E3A /* ImageInsertTableViewCell.xib in Resources */,
 				E94C826325FFC20700419D48 /* ListImagesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,6 +541,7 @@
 				E985B7E225FE194100E9DFFE /* ObjectMapperModel.swift in Sources */,
 				E985B84625FE2AC200E9DFFE /* SkeletonLoad.swift in Sources */,
 				E945299825FB78A800BC68C9 /* AppDelegate.swift in Sources */,
+				E95A9920260104AB00C06E3A /* ImageInsertTableViewCell.swift in Sources */,
 				E945299A25FB78A800BC68C9 /* SceneDelegate.swift in Sources */,
 				E985B7C525FE18C100E9DFFE /* ErrorMessage.swift in Sources */,
 				E985B89C25FE5CBF00E9DFFE /* PageModel.swift in Sources */,

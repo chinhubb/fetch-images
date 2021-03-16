@@ -35,6 +35,7 @@ class ImagesFeedViewController: UIViewController {
 
     func initTableView() {
         tableView.register(ListImagesTableViewCell.nib, forCellReuseIdentifier: ListImagesTableViewCell.identifier)
+        tableView.register(ImageInsertTableViewCell.nib, forCellReuseIdentifier: ImageInsertTableViewCell.identifier)
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -58,7 +59,6 @@ class ImagesFeedViewController: UIViewController {
     }
 
     @objc func pullRefresh(sender: Any) {
-//        getImages(selectCatagory, selectType, "0")
         getImages("\(pageInt)")
     }
 
@@ -101,22 +101,6 @@ class ImagesFeedViewController: UIViewController {
             }
         }
     }
-
-//    func getImages() {
-//        let repository = PhotoRepository()
-//        repository.getPhotoPopular().subscribe { event in
-//            switch event {
-//            case let .next(data):
-//                let list = data.photos
-//                self.listPhoto = list
-//                self.tableView.reloadData()
-//            case let .error(error):
-//                print(error)
-//            case .completed:
-//                print("completed")
-//            }
-//        }
-//    }
 }
 
 extension ImagesFeedViewController: UITableViewDelegate, UITableViewDataSource {
@@ -125,8 +109,16 @@ extension ImagesFeedViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row % 5 == 4 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImageInsertTableViewCell", for: indexPath) as? ImageInsertTableViewCell else { return UITableViewCell() }
+            return cell
+        }
+
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ListImagesTableViewCell", for: indexPath) as? ListImagesTableViewCell else { return UITableViewCell() }
-        cell.setCell(listPhoto?[indexPath.row])
+
+        // row mod 5 == 0
+        let oldRow = indexPath.row - indexPath.row / 5
+        cell.setCell(listPhoto?[oldRow])
         return cell
     }
 
